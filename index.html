@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swell & Sand | Beach Sport Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌊 Swell & Sand</h1>
+            <p>Check the conditions and find your perfect beach sport.</p>
+        </div>
+    </header>
 
+    <main class="container">
+        <section class="controls">
+            <label for="beach-select"><strong>Select your local beach:</strong></label>
+            <select id="beach-select">
+                <option value="none" selected disabled>-- Choose a Beach --</option>
+                <option value="ocean_beach">Ocean Beach</option>
+                <option value="pacifica">Pacifica State Beach</option>
+                <option value="santa_cruz">Santa Cruz (Steamer Lane)</option>
+                <option value="huntington">Huntington Beach</option>
+            </select>
+        </section>
+
+        <section id="conditions-panel" class="card hidden">
+            <h2>Current Conditions</h2>
+            <div class="grid">
+                <div class="stat-box">
+                    <span class="icon">🌊</span>
+                    <h3>Waves</h3>
+                    <p id="wave-data">-- ft</p>
+                </div>
+                <div class="stat-box">
+                    <span class="icon">💨</span>
+                    <h3>Wind</h3>
+                    <p id="wind-data">-- mph</p>
+                </div>
+                <div class="stat-box">
+                    <span class="icon">☀️</span>
+                    <h3>Weather</h3>
+                    <p id="weather-data">--</p>
+                </div>
+                <div class="stat-box">
+                    <span class="icon">👥</span>
+                    <h3>Crowd</h3>
+                    <p id="crowd-data">--</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="suggestion-panel" class="card hidden">
+            <h2>Recommended Activity</h2>
+            <div id="sport-suggestion" class="suggestion-highlight">
+                </div>
+            <p id="suggestion-reasoning" class="reasoning"></p>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
